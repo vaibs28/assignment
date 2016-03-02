@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/WEB-INF/templates/template.xhtml">
+
+	<ui:define name="content">
+		<div style="background-color: #b3c6ff; height: 500px; width: 100%;">
+			<div
+				style="width: 49%;height:50%; border-color: white; border-style: solid; display: inline-block; float: left;">
+				<h3 style="margin-left: 10px;">Personal Information</h3>
+				<h:panelGrid columns="2" cellspacing="20" width="500">
+					<h:outputText value="Name"></h:outputText>
+					<h:outputText value="#{loginBean.name}"></h:outputText>
+					<h:outputText value="Phone Number"></h:outputText>
+					<h:outputText value="889842424">
+					</h:outputText>
+					<h:outputText value="Email ID"></h:outputText>
+					<h:outputText value="abc@gmail.com"></h:outputText>
+				</h:panelGrid>
+				
+				<div align="center"><h:commandButton value="Edit" action="edit"></h:commandButton></div>
+			</div>
+			<div
+				style="border-style: solid; border-color: white; width: 50%;height:50%; display: inline-block; float: left;">
+				<h3 style="margin-left: 10px;">Plot Information</h3>
+				<h:form>
+				<h:panelGrid columns="2" cellspacing="20" width="500">
+					<h:commandLink value="Plot1" target="_self"></h:commandLink>
+					<h:outputText value="Rs 5000"></h:outputText>
+					<h:commandLink value="Plot 2"></h:commandLink>
+					<h:outputText value="Rs 10000">
+					</h:outputText>
+					<h:commandLink  value="Plot 3"></h:commandLink>
+					<h:outputText value="Rs 5000"></h:outputText>
+				</h:panelGrid>
+				</h:form>
+			</div>
+		</div>
+	</ui:define>
+</ui:composition>
+</html>
